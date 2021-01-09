@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|svg)$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /fonts/],
         use: [
           {
             loader: "file-loader",
@@ -24,7 +24,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff2|woff|eot|ttf)$/,
+        test: /\.(woff2|woff|eot|svg|ttf)$/,
         use: [
           {
             loader: "file-loader",
