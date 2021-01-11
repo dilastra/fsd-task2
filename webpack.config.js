@@ -25,6 +25,7 @@ module.exports = {
       },
       {
         test: /\.(woff2|woff|eot|svg|ttf)$/,
+        exclude: [/node_modules/, /images/],
         use: [
           {
             loader: "file-loader",
@@ -54,6 +55,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.pug",
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: "ui-kit/colors-and-type.html",
+      template: "./src/pages/ui-kit/colors-and-type.pug",
       inject: true,
     }),
   ],
