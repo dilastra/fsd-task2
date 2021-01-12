@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -13,7 +14,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|svg)$/,
-        exclude: [/node_modules/, /fonts/],
+        exclude: [/node_modules/, /fonts/, /favicons/],
         use: [
           {
             loader: "file-loader",
@@ -24,8 +25,20 @@ module.exports = {
         ],
       },
       {
+        test: /\.(png|xml|ico|svg)$/,
+        exclude: [/node_modules/, /fonts/, /images/],
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "favicons/[name].[ext]",
+            },
+          },
+        ],
+      },
+      {
         test: /\.(woff2|woff|eot|svg|ttf)$/,
-        exclude: [/node_modules/, /images/],
+        exclude: [/node_modules/, /images/, /favicons/],
         use: [
           {
             loader: "file-loader",
@@ -52,13 +65,14 @@ module.exports = {
     extensions: [".js", ".scss"],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.pug",
       inject: true,
     }),
     new HtmlWebpackPlugin({
-      filename: "ui-kit/colors-and-type.html",
+      filename: "pages/ui-kit/colors-and-type.html",
       template: "./src/pages/ui-kit/colors-and-type.pug",
       inject: true,
     }),

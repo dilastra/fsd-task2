@@ -1,6 +1,24 @@
-mixin color(nameColor, codeColor)
+mixin colorBlock(nameColor, codeColor, nameClassBlock)
   div(class="color")
-    div(class="color__color-view-block")
-    div(class="color__color-description")
-      p(class="color__name-color")=nameColor
-      p(class="color__code-color")=codeColor
+        div(class="color__color-block "+nameClassBlock)
+        div(class="color__color-description")
+          p(class="color__color-name")=nameColor
+          p(class="color__color-code")=codeColor
+
+
+mixin color(nameColor, codeColor)
+  case nameColor
+    when 'Dark Shade 100%'
+     +colorBlock(nameColor, codeColor, 'color__color-block_bgc_dark_shade_100')
+    when 'Dark Shade 75%'
+      +colorBlock(nameColor, codeColor, 'color__color-block_bgc_dark_shade_75')
+    when 'Dark Shade 50%'
+      +colorBlock(nameColor, codeColor, 'color__color-block_bgc_dark_shade_50')
+    when 'Dark Shade 25%'
+      +colorBlock(nameColor, codeColor, 'color__color-block_bgc_dark_shade_25')
+    when 'Dark Shade 5%'
+      +colorBlock(nameColor, codeColor, 'color__color-block_bgc_dark_shade_5')
+    when 'Purple'
+      +colorBlock(nameColor, codeColor, 'color__color-block_bgc_purple')
+    when 'Green'
+      +colorBlock(nameColor, codeColor, 'color__color-block_bgc_green')

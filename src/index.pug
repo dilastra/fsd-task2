@@ -1,10 +1,9 @@
-
+include ./components/head/head.pug
 <!DOCTYPE html>
 html(lang="ru")
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Отель Toxin
+  +head('Отель Toxin')
   body
+  img(src="./images/logo.svg")
+  a(href="/pages/ui-kit/colors-and-type.html") link
     include ./components/colors-and-type/color/color.pug
-    +color('Dark Shade 100%', "#1F2041")
