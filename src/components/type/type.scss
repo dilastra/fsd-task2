@@ -1,0 +1,72 @@
+@import "../../assets/styles/variables/variables";
+
+.type {
+  display: flex;
+  margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &__name-tag {
+    &-container {
+      max-width: 37px;
+      width: 100%;
+    }
+    text-align: right;
+    display: block;
+    text-transform: uppercase;
+    color: rgba($palette-secondary, 0.25);
+
+    &_style_for_h1 {
+      font-size: 24px;
+    }
+
+    &_style_for_h2 {
+      font-size: 19px;
+    }
+
+    &_style_for_h3 {
+      font-size: 12px;
+    }
+
+    &_style_for_body {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: normal;
+      text-transform: capitalize;
+    }
+  }
+
+  &__text {
+    &-container {
+      margin-left: 30px;
+    }
+    max-width: 378px;
+    font-weight: bold;
+    &_style_for_h1 {
+      min-height: 60px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    &_style_for_h2 {
+      min-height: 48px;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    &_style_for_h3 {
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &_style_for_body {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      max-width: 301px;
+    }
+  }
+}

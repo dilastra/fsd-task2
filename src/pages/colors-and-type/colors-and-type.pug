@@ -1,6 +1,26 @@
 include ../../components/head/head.pug
+include ../../components/headers/ui-kit-header/ui-kit-header.pug
+include ../../components/color/color.pug
+include ../../components/type/type.pug
 
 <!DOCTYPE html>
 html(lang="en")
-    +head('Colors & Type')
-    body
+  +head('Colors & Type')
+  body
+    +uiKitHeader()
+    main(class="main")
+      div(class="main__section-colors")
+        div(class="main__colors-container")
+          +color('Dark Shade 100%', '#1f2041')
+          +color('Dark Shade 75%', '#1f2041')
+          +color('Dark Shade 50%', '#1f2041')
+          +color('Dark Shade 25%', '#1f2041')
+          +color('Dark Shade 5%', '#1f2041')
+          +color('Purple', '#BC9CFF')
+          +color('Green', '#6FCF97')
+      div(class="main__section-types")
+        div(class="main__types-container")
+          +type('h1', 'This one is the sub-section or widget title')
+          +type('h2', 'Next one is the item title inside widgets')
+          +type('h3', 'This is a label or CTA text')
+          +type('body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')

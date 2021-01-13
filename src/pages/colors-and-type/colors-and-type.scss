@@ -1,0 +1,27 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "colors types";
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-top: 33px;
+
+  &__colors-container {
+    margin-left: 149px;
+  }
+
+  &__section {
+    &-colors {
+      display: flex;
+      flex-direction: column;
+      grid-area: colors;
+    }
+
+    &-types {
+      display: flex;
+      justify-content: flex-end;
+      grid-area: types;
+      padding-right: 158px;
+    }
+  }
+}

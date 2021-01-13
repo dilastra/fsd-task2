@@ -1,0 +1,12 @@
+@import "../../../assets/styles/variables/variables";
+
+.header {
+  width: 100%;
+  min-width: 20rem;
+  padding: 1.875rem;
+
+  &__logo {
+    width: 3rem;
+    height: 3rem;
+  }
+}

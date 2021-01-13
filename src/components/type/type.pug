@@ -1,0 +1,17 @@
+mixin typeBlock(tagName, textForTag)
+  div(class="type")
+    div(class="type__name-tag-container")
+      span(class="type__name-tag type__name-tag_style_for_" + tagName)= tagName
+    div(class="type__text-container")
+      h1(class="type__text type__text_style_for_" + tagName)= textForTag
+
+mixin type(tagName, textForTag)
+  case tagName
+    when 'h1'
+      +typeBlock(tagName, textForTag)
+    when 'h2'
+      +typeBlock(tagName, textForTag)
+    when 'h3'
+      +typeBlock(tagName, textForTag)
+    when 'body'
+      +typeBlock(tagName, textForTag)
