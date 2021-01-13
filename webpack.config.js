@@ -72,8 +72,8 @@ module.exports = {
       inject: true,
     }),
     new HtmlWebpackPlugin({
-      filename: "pages/ui-kit/colors-and-type.html",
-      template: "./src/pages/ui-kit/colors-and-type.pug",
+      filename: "colors-and-type.html",
+      template: "./src/pages/colors-and-type/colors-and-type.pug",
       inject: true,
     }),
   ],
