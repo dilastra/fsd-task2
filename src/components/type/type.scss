@@ -2,10 +2,6 @@
 
 .type {
   display: flex;
-  margin-bottom: 50px;
-  &:last-child {
-    margin-bottom: 0px;
-  }
 
   &__name-tag {
     &-container {
@@ -31,7 +27,6 @@
 
     &_style_for_body {
       font-size: 14px;
-      line-height: 24px;
       font-weight: normal;
       text-transform: capitalize;
     }
@@ -65,8 +60,9 @@
     &_style_for_body {
       font-weight: normal;
       font-size: 14px;
-      line-height: 24px;
+      line-height: 170%;
       max-width: 301px;
+      color: rgba($palette-secondary, 0.75);
     }
   }
 }

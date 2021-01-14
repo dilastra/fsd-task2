@@ -1,27 +1,55 @@
 .main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "colors types";
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 120rem;
   margin: 0 auto;
   padding-top: 33px;
 
+  @media (max-width: 1024px) {
+    padding: 33px 30px 0 30px;
+  }
+
+  @media (max-width: 780px) {
+    justify-content: center;
+  }
+
   &__colors-container {
-    margin-left: 149px;
+    padding-left: 150px;
+
+    @media (max-width: 1024px) {
+      padding: 0;
+    }
+
+    & .color {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__types-container {
+    padding-right: 158px;
+    @media (max-width: 1024px) {
+      padding: 0;
+    }
+
+    @media (max-width: 780px) {
+      margin-top: 80px;
+    }
+
+    & .type {
+      margin-bottom: 50px;
+    }
   }
 
   &__section {
     &-colors {
       display: flex;
       flex-direction: column;
-      grid-area: colors;
     }
 
     &-types {
       display: flex;
       justify-content: flex-end;
-      grid-area: types;
-      padding-right: 158px;
     }
   }
 }

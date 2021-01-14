@@ -1,12 +1,8 @@
 @import "../../assets/styles/variables/variables";
 
 .color {
-  &:last-child {
-    margin-bottom: 0rem;
-  }
   display: flex;
   align-items: center;
-  margin-bottom: 1.25rem;
   &__color {
     &-block {
       display: block;
