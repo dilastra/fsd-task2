@@ -1,0 +1,14 @@
+include ../../components/head/head.pug
+include ../../components/headers/ui-kit-header/ui-kit-header.pug
+include ../../components/input/input.pug
+<!DOCTYPE html>
+html(lang="en")
+    head
+      +head('Form elements')
+    body
+      +uiKitHeader()
+      main(class="form-elements")
+        div(class="text-control__container")
+         +input('text field')(type='text', placeholder='Email')
+        div(class="text-control__container")
+         +input('text field')(type='text', placeholder='Email' value="This is pretty awesome")

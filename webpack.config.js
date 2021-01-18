@@ -76,6 +76,11 @@ module.exports = {
       template: "./src/pages/colors-and-type/colors-and-type.pug",
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      filename: "form-elements.html",
+      template: "./src/pages/form-elements/form-elements.pug",
+      inject: true,
+    }),
   ],
   output: {
     filename: "[name].bundle.js",

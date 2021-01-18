@@ -1,13 +1,13 @@
-.main {
+.colors-and-type {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 120rem;
   margin: 0 auto;
-  padding-top: 33px;
+  padding-top: 2.0625rem;
 
   @media (max-width: 1024px) {
-    padding: 33px 30px 0 30px;
+    padding: 2.0625rem 1.875rem 0 1.875rem;
   }
 
   @media (max-width: 780px) {
@@ -15,7 +15,7 @@
   }
 
   &__colors-container {
-    padding-left: 150px;
+    padding-left: 9.375rem;
 
     @media (max-width: 1024px) {
       padding: 0;
@@ -27,17 +27,17 @@
   }
 
   &__types-container {
-    padding-right: 158px;
+    padding-right: 9.875rem;
     @media (max-width: 1024px) {
       padding: 0;
     }
 
     @media (max-width: 780px) {
-      margin-top: 80px;
+      margin-top: 5rem;
     }
 
     & .type {
-      margin-bottom: 50px;
+      margin-bottom: 3.125rem;
     }
   }
 
