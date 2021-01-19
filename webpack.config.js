@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|svg)$/,
-        exclude: [/node_modules/, /fonts/, /favicons/],
+        exclude: [/node_modules/, /fonts/, /favicons/, /icons/],
         use: [
           {
             loader: "file-loader",
@@ -26,7 +26,12 @@ module.exports = {
       },
       {
         test: /\.(png|xml|ico|svg)$/,
-        exclude: [/node_modules/, /fonts/, /images/],
+        exclude: [
+          /node_modules/,
+          /fonts/,
+          __dirname + "./assets/icons",
+          /images/,
+        ],
         use: [
           {
             loader: "file-loader",
@@ -38,12 +43,24 @@ module.exports = {
       },
       {
         test: /\.(woff2|woff|eot|svg|ttf)$/,
-        exclude: [/node_modules/, /images/, /favicons/],
+        exclude: [/node_modules/, /images/, /favicons/, /icons/],
         use: [
           {
             loader: "file-loader",
             options: {
               name: "fonts/[name].[contenthash].[ext]",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff2|woff|eot|svg|ttf)$/,
+        exclude: [/node_modules/, /images/, /favicons/, /fonts/],
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "icons/[name].[ext]",
             },
           },
         ],

@@ -4,5 +4,6 @@ import * as Head from "./head";
 import * as Favicons from "./favicons";
 import * as Types from "./type";
 import * as Input from "./input";
+import * as Dropdown from "./dropdown";
 
-export { Color, Headers, Head, Favicons, Types, Input };
+export { Color, Dropdown, Headers, Head, Favicons, Types, Input };

@@ -1,7 +1,6 @@
-import "./assets";
-import "./index.pug";
+import * as Assets from "./assets";
 
 import * as Components from "./components";
 import * as Pages from "./pages";
 
-export { Components, Pages };
+export { Assets, Components, Pages };
